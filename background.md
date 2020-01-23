@@ -31,7 +31,36 @@ Orchestration : 여러 서버를 관리해주는 것
 
 * docker container run -it --name webserver -d -p 80:80 nginx /bin : -it(인풋을 받겠다, 커멘드 가능) 컨테이너의 이름이 webserver , -d 백그라운드로 돌리겠다. -p(포트 번호 나온다) , /bin : 마지막에 들어가는 것은 명령어, 이걸 수행해라
 
-* docker container ps -a : 모든 도커 컨테이너들의 정보가 나타남
+* docker (container) ps -a or docker container ls -a : 모든 도커 컨테이너들의 정보가 나타남
 
 * docker container rm(prune) webserver : webserver 라는 이름의 컨테이너 모두 삭제 , prune을 쓸경우 정지되어 있는 컨테이너 모두 삭제
 
+* Ctrl + p , Ctrl + q : 컨테이너를 실행하고, 커멘드 창이 떠있는 상태에서 컨테이너를 종료하지 않고 나올 수 있는 방법(**detach**)
+
+* docker attach <container-name> : detach 로 나온 컨테이너에 다시 재진입
+
+* exit(Ctrl + D) : 도커의 컨테이너를 죽이는 것, 종료하면서 나온다
+
+* docker (container) stop <container-name> : 실행되고 있는 컨테이너를 완전히 죽이는 키워드(**stop**)
+  
+* docker (container) start <container-name> : 종료시킨 컨테이너를 다시 재실행
+  
+* docker container exec -it <container-name> cat /etc/hosts : 실행되어 있는 컨테이너에게 명령을 주는 커맨드 **exec**
+  
+* docker container port <container-name> : 컨테이너가 사용하고 있는 포트를 알려줌
+  
+* docker container rename <container-name> <바꿀 이름> : 기존 컨테이너의 이름을 바꾸는 명령어
+  
+## FILE Copy & Share
+
+* docker container cp <container-name>:<path> <client-path> : path(컨테이너의)에 있는 파일을 내 path로 보내
+  * docker container cp <client-file> <container-name>:<path> : 내 path에 있는 파일을 컨테이너의 pathd에 보내
+  
+### Share Directory
+
+* docker run **-v** <localpath>:<container-path> : localpath와 container-path를 연결함
+  
+#### in 리눅스
+
+* docker stop `docker ps -q` : 실행 되어 있는 모든 컨테이너를 중지시켜라.
+  * docker ps -q : 리눅스 명령어로, 실행되어 있는 컨테이너들의 ID를 보여줌
