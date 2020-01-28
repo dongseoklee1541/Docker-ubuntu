@@ -51,6 +51,12 @@ Orchestration : 여러 서버를 관리해주는 것
   
 * docker container rename <container-name> <바꿀 이름> : 기존 컨테이너의 이름을 바꾸는 명령어
   
+## 컨테이너 둘러보기
+* docker logs [OPTIONS] CONTAINER : 특정 컨테이너가 실행된 후 로그를 보기 위한 명령어
+  * OPTIONS 으로 -f, -tail가 있다.
+  * -tail n : 마지막 n 줄만 출력해라. ex) docker logs -tail 10 CONTAINER(마지막 10줄만 출력)
+  * -f : 실시간 로그 출력
+  
 ## FILE Copy & Share
 
 * docker container cp <container-name>:<path> <client-path> : path(컨테이너의)에 있는 파일을 내 path로 보내
@@ -64,3 +70,8 @@ Orchestration : 여러 서버를 관리해주는 것
 
 * docker stop `docker ps -q` : 실행 되어 있는 모든 컨테이너를 중지시켜라.
   * docker ps -q : 리눅스 명령어로, 실행되어 있는 컨테이너들의 ID를 보여줌
+
+----
+
+# Linux
+
