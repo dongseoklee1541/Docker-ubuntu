@@ -73,5 +73,4 @@ Orchestration : 여러 서버를 관리해주는 것
 
 ----
 
-# Linux
 
