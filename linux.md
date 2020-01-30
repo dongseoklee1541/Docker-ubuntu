@@ -108,5 +108,38 @@ shell 위에서 하는것이다.
 * rmdir <dir> : 디렉토리를 삭제하는 키워드, 디렉토리가 비어있지 않으면 삭제가 되지 않는다.
 * rm -rf <dir> : 디렉토리를 삭제하는 키워드, 디렉토리에 내용이 있어도 삭제됨, -rf 가 들어가면서 묻지말고 다 삭제하게 됨
 * su - <account-name> : 해당 사용자로 접속
-* echo : 파이썬의 print와 같은 역할. ex) echo $HOME
 
+
+#### 기본 명령어
+* ls : 파일 리스트 보기 
+* touch <파일이름> : touch 는 파일을 생성하는 명령어이다.
+* cat : 파일 내용 보기
+----
+* head -<n> : 내용을 볼때 위에서부터 n 만큼 보겠다. ex) head -10 : 위에서 10줄만 보여줘
+ * tail -<n> : head와 반대로 밑에서부터 보겠다.
+----
+* pwd(present work directory) : 현재 디렉토리를 알려줘
+* which : 해당 파일이 어느 폴더에 있니?
+* clear : 화면 지우기
+* echo : 파이썬의 print와 같은 역할. ex) echo $HOME
+  * cf. echo "ttt" > test.txt : test.txt 에 ttt를 입력해라. 여기서 ">" 꺽쇠 하나는 새로 쓰는것, ">>" 는 attach, 뒤에 이어서 쓰는 것이다.
+----
+* cd : "cd .." 상위 디렉토리로 이동
+  * cd - : 이전 상태로 돌아가기(history 에서 앞으로 돌아가는 것)
+----
+* mkdir : dir를 만든다
+  * rmdir : dir를 지운다.
+----
+* cd <filename> <path>: 복사해서 이동시키기
+ * mv <filename> <path> : 그대로 이동시키기
+ * rm <filename> : 파일 삭제
+* ll = alias에 의해 'ls -alf'의 별칭이다. cf. ls -alF :a가 붙었기에 모든걸(숨김 폴더도) 한줄씩 보여줘
+* la = alias에 의해 'ls -A' : 한줄에 다 보여줘
+* l = alias에 의해 'ls -CF' : 숨김폴더는 제외하고 보여줘
+
+
+* (sudo) apt-get install/ <name> : apt 폴더에 라이브러리를 설치함
+  * apt-get update : install 전에 apt-get 을 업데이트해 최신화 시켜주자. 파이썬에서 pip 업데이트 하듯이 말이다.
+  * ex) apt-get install vim : vim을 설치해라.
+ 
+ 
