@@ -131,7 +131,7 @@ shell 위에서 하는것이다.
   * rmdir : dir를 지운다.
 ----
 * cd <filename> <path>: 복사해서 이동시키기 덮어 씌우기는 안됨( 만약 덮어씌우고 싶다면, cd -af <filename> ... 으로 실행하자.)
- * mv <filename> <path> : 그대로 이동시키기
+ * mv <filename> <path> : 그대로 이동시키기, 또한 Rename 이라는 개념이 따로 없고 mv 명령어를 그대로 사용하면 된다.
  * rm <filename> : 파일 삭제
 * ll = alias에 의해 'ls -alf'의 별칭이다. cf. ls -alF :a가 붙었기에 모든걸(숨김 폴더도) 한줄씩 보여줘
 * la = alias에 의해 'ls -A' : 한줄에 다 보여줘
@@ -141,7 +141,6 @@ shell 위에서 하는것이다.
 * (sudo) apt-get install/ <name> : apt 폴더에 라이브러리를 설치함
   * apt-get update : install 전에 apt-get 을 업데이트해 최신화 시켜주자. 파이썬에서 pip 업데이트 하듯이 말이다.
   * ex) apt-get install vim : vim을 설치해라.
- 
  
 ----
 
