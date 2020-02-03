@@ -30,6 +30,8 @@ Orchestration : 여러 서버를 관리해주는 것
 * docker system df : 도커의 현재 이미지 개수, 사용량 등의 정보를 보여줌
 
 * docker container run -it --name webserver -d -p 80:80 nginx /bin : -it(인풋을 받겠다, 커멘드 가능) 컨테이너의 이름이 webserver , -d 백그라운드로 돌리겠다. -p(포트 번호 나온다) , /bin : 마지막에 들어가는 것은 명령어, 이걸 수행해라
+  * i : Interactive 모드로 표준입력과 표준출력을 키보드와 화면을 통해 가능하도록 하는 옵션이다.
+  * t:  텍스트 기반의 터미널(TTY)을 애뮬레이션해주는 옵션이다.
 
 * docker (container) ps -a or docker container ls -a : 모든 도커 컨테이너들의 정보가 나타남
 
