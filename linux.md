@@ -1,5 +1,5 @@
 # Linux
-kernel과 command 을 합쳐놓은것(OS)이다. kernel 은 infra(하드웨어)를 관리하기 위해서, shell은 command를 관리하기 쉽게 하기 위해 만들어졌다.
+kernel과 command 을 합쳐놓은것(OS)이다. kernel 은 infra(하드웨어)를 관리하기 위해서, shell은 command를 관리하기 쉽게 하기 위해 만들어졌다
 
 
 ### Kernel
