@@ -53,6 +53,7 @@ Orchestration : 여러 서버를 관리해주는 것
   
 * docker container rename <container-name> <바꿀 이름> : 기존 컨테이너의 이름을 바꾸는 명령어
   
+* docker --link : Docker 컨테이너가 다른 컨테이너에 엑세스 할 수있도록 한다.
 ## 컨테이너 둘러보기
 * docker logs [OPTIONS] CONTAINER : 특정 컨테이너가 실행된 후 로그를 보기 위한 명령어
   * OPTIONS 으로 -f, -tail가 있다.
