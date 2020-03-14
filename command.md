@@ -43,12 +43,15 @@ Orchestration : 여러 서버를 관리해주는 것
 
 * exit(Ctrl + D) : 도커의 컨테이너를 죽이는 것, 종료하면서 나온다
 
+#### 도커 중지,재실행,명령어
 * docker (container) stop <container-name> : 실행되고 있는 컨테이너를 완전히 죽이는 키워드(**stop**)
   
 * docker (container) start <container-name> : 종료시킨 컨테이너를 다시 재실행
   
 * docker container exec -it <container-name> cat /etc/hosts : 실행되어 있는 컨테이너에게 명령을 주는 커맨드 **exec**
   
+----
+
 * docker container port <container-name> : 컨테이너가 사용하고 있는 포트를 알려줌
   
 * docker container rename <container-name> <바꿀 이름> : 기존 컨테이너의 이름을 바꾸는 명령어
@@ -67,7 +70,7 @@ Orchestration : 여러 서버를 관리해주는 것
   
 ### Share Directory
 
-* docker run **-v** <localpath>:<container-path> : localpath와 container-path를 연결함
+* docker run **-v** <localpath>:<container-path> : localpath와 container-path를 연결함, 디렉토리 공유
   
 #### in 리눅스
 
@@ -76,4 +79,9 @@ Orchestration : 여러 서버를 관리해주는 것
 
 ----
 
+#### install MYSQL
 
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root1! --name mysql5 mysql
+
+* -e : 환경변수, os에서 사용하는 변수를 뜻한다.
+* MYSQL_ROOT_PASSWORD : ROOT(최고관리자)의 패스워드
