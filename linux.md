@@ -138,7 +138,7 @@ shell 위에서 하는것이다.
 * l = alias에 의해 'ls -CF' : 숨김폴더는 제외하고 보여줘
 
 
-* (sudo) apt-get install/ <name> : apt 폴더에 라이브러리를 설치함
+* (sudo) apt-get install/ <name> (-y) : apt 폴더에 라이브러리를 설치함, -y는 설치하는중간에 물어보는 것에 대해 모두 yes라 한다는 뜻
   * apt-get update : install 전에 apt-get 을 업데이트해 최신화 시켜주자. 파이썬에서 pip 업데이트 하듯이 말이다.
   * ex) apt-get install vim : vim을 설치해라.
  
@@ -151,8 +151,17 @@ shell 위에서 하는것이다.
 * free (-m) : 메모리 사용량 확인 cf. swap은 디스크에서 빌려온 것들을 말한다.
 * top : CPU 코어 점유율, 사용량 확인
 * vmstat (n): 메모리와 CPU 등 사용량을 요약해서 한번에 보여줌 , n 을 넣을 경우 n초 단위로 갱신됨
+* ps -ef 
 ----
-
+* <ps -ef> | grep : grep  은 필터 역할을 한다 .
 * echo **'#!/bin/sh'** > tt.sh 
 * chmod <nnn> : 읽기쓰기 권한을 바꾸는 것, 2진수로 이루어져 있으며 나(3bit) 그룹(3bit) 상대(3bit) 로 이루어져있다.
 * chown <username>:<groupname> <filename> : 지정한 유저와 그룹으로 파일의 권한 변경
+* ln -s <dir(존재하는)> <링크명>: 링크, 일일히 다 치기 힘든 디렉토리 주소를 미리 정의, **윈도우의 바로가기와 같다**
+
+
+----
+### grep
+grep 은 정규표현식을 사용한다.
+
+* grep <찾을단어> <file-name> [-io]
