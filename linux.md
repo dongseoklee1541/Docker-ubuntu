@@ -164,4 +164,4 @@ shell 위에서 하는것이다.
 ### grep
 grep 은 정규표현식을 사용한다.
 
-* grep <찾을단어> <file-name> [-io]
+* grep <찾을단어> <file-name> [-io].
