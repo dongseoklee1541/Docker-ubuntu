@@ -41,6 +41,7 @@ h,j,k,l 로 방향을 이동할 수 있다. h는 좌 l은 우 j는 아래 마지
 * w : save
 * q : quit
 * wq : 저장하고 나가라. (w와 q를 함께 사용)
+* q! : 저장하지 않고 그냥 나가기
 * set nu : line number를 보여줘
 * set nonu : line number를 지워줘
 * paste : 
