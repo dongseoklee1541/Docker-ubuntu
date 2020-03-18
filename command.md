@@ -82,7 +82,7 @@ Orchestration : 여러 서버를 관리해주는 것
   
 #### in 리눅스
 
-* docker stop `docker ps -q` : 실행 되어 있는 모든 컨테이너를 중지시켜라.
+* docker stop $(docker ps -a -q) : 실행 되어 있는 모든 컨테이너를 중지시켜라.
   * docker ps -q : 리눅스 명령어로, 실행되어 있는 컨테이너들의 ID를 보여줌
 
 ----
