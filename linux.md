@@ -165,3 +165,30 @@ shell 위에서 하는것이다.
 grep 은 정규표현식을 사용한다.
 
 * grep <찾을단어> <file-name> [-io].
+
+
+---
+#### Telnet Daemon in Ubuntu
+
+```
+sudo apt-get install xinetd telnetd
+
+vi /etc/xinetd.d/telnet : xinted 란 xinte의 데몬이라는 뜻
+
+service telnet
+{
+    disable = no
+    flags = REUSE
+    socket_type = stream
+    wait = no
+    user = root
+    server = /usr/sbin/in.telnetd
+    log_on_failure += USERID
+}
+
+/etc/init.d/xinetd restart : 코드 삭정후 xinetd 재실행
+
+
+
+------
+출처 : 시니어코딩 - 리눅스1~5강
