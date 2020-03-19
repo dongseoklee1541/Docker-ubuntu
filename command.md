@@ -49,6 +49,7 @@ Orchestration : 여러 서버를 관리해주는 것
 * docker (container) start <container-name> : 종료시킨 컨테이너를 다시 재실행
   
 * docker container exec -it <container-name> cat /etc/hosts : 실행되어 있는 컨테이너에게 명령을 주는 커맨드 **exec**
+  * docker exec -it ubv bash : "ubuntu의 bash쉘을 실행해라", 나갈때 그냥 exit해도 컨테이너가 종료되지 않는다.
   
 ----
 
