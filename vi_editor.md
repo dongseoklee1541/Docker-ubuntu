@@ -46,7 +46,7 @@ h,j,k,l 로 방향을 이동할 수 있다. h는 좌 l은 우 j는 아래 마지
 * q! : 저장하지 않고 그냥 나가기
 * set nu : line number를 보여줘
 * set nonu : line number를 지워줘
-* paste : 붙여넣기, 파이썬과 같은 경우 indentation이 깨지는것을 방지하기 위한 붙여넣기
+* set paste : 붙여넣기, 파이썬과 같은 경우 indentation이 깨지는것을 방지하기 위한 붙여넣기
 * %s/pts/ttt(/g) : %s는 replace역할을 하며, pts를 ttt로 바꾸겠다는 의미이다. 여기서 g를 넣으면 global 즉 모두 바꾸게 된다.
   * %s/찾을문자/바꿀문자/ig : ig는 ignore case로 대소문자 구별없이 모두 바꾸겠다는 것.
 ### search(명령모드)
