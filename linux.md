@@ -42,7 +42,7 @@ shell 위에서 하는것이다.
 
 * /media : ssd , 외장하드 , 마운트에서 쓰는 것들
 
-* opt : application software package , app 프로그램이라고 
+* /opt : application software package , app 프로그램이라고 
 
 * **/proc** : process info 
 
