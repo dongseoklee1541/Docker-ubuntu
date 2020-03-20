@@ -110,7 +110,7 @@ shell 위에서 하는것이다.
 * su - <account-name> : 해당 사용자로 접속
 
 
-#### 기본 명령어
+### 기본 명령어
 * ls : 파일 리스트 보기 
 * touch <파일이름> : touch 는 파일을 생성하는 명령어이다.
 * cat : 파일 내용 보기
@@ -137,10 +137,14 @@ shell 위에서 하는것이다.
 * la = alias에 의해 'ls -A' : 한줄에 다 보여줘
 * l = alias에 의해 'ls -CF' : 숨김폴더는 제외하고 보여줘
 
-
+#### apt
 * (sudo) apt-get install/ <name> (-y) : apt 폴더에 라이브러리를 설치함, -y는 설치하는중간에 물어보는 것에 대해 모두 yes라 한다는 뜻
-  * apt-get update : install 전에 apt-get 을 업데이트해 최신화 시켜주자. 파이썬에서 pip 업데이트 하듯이 말이다.
+  * apt-get update : apt가 다운받을 수 있는 목록을 최신화 시켜주는 것이다.
+ install 전에 apt-get 을 업데이트해 최신화 시켜주자. 파이썬에서 pip 업데이트 하듯이 말이다.
+  * apt-cache search <package-name> : 패키지 이름로 시작하는 패키지들을 찾아준다.
+  * apt-get upgrade <package-name> 
   * ex) apt-get install vim : vim을 설치해라.
+  * apt-get remove <package-name> : 패키지를 제거해라.
  
 ----
 
@@ -149,7 +153,8 @@ shell 위에서 하는것이다.
   * du -sk(m) <dir> : 디렉토리 이하의 값들을 한번에 모두 더해서 보여달라.
 ----
 * free (-m) : 메모리 사용량 확인 cf. swap은 디스크에서 빌려온 것들을 말한다.
-* top : CPU 코어 점유율, 사용량 확인
+* top : 윈도우의 작업관리자와 같은 것. CPU 코어 점유율, 사용량 확인
+ * htop : top보다 이쁘게 보여줌
 * vmstat (n): 메모리와 CPU 등 사용량을 요약해서 한번에 보여줌 , n 을 넣을 경우 n초 단위로 갱신됨
 * ps -ef 
 ----
