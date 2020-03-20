@@ -8,6 +8,7 @@
 
 * 편집 모드 --> 명령 모드 : 편집모드에서 esc
 
+<img src="https://github.com/dongseoklee1541/Docker/image/99b983892094b5c6d2fc3736e15da7d1.png">
 
 ### 방향 전환
 h,j,k,l 로 방향을 이동할 수 있다. h는 좌 l은 우 j는 아래 마지막으로 k는 위다. 
