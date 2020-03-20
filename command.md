@@ -32,6 +32,7 @@ Orchestration : 여러 서버를 관리해주는 것
 * docker container run -it --name webserver -d -p 80:80 nginx /bin : -it(인풋을 받겠다, 커멘드 가능) 컨테이너의 이름이 webserver , -d 백그라운드로 돌리겠다. -p(포트 번호 나온다) , /bin : 마지막에 들어가는 것은 명령어, 이걸 수행해라
   * i : Interactive 모드로 표준입력과 표준출력을 키보드와 화면을 통해 가능하도록 하는 옵션이다.
   * t:  텍스트 기반의 터미널(TTY)을 애뮬레이션해주는 옵션이다.
+  * docker run --restart=always : --restart=always는 컨테이너를 종료하고 나와도 언제든 재실행 시키겠다는 뜻, 꺼지면 안되는 컨테이너에 유용한 옵션 하지만 stop 하면 종료된다. 내가 실수로 종료한것만 꺼지지 않는다. 
 
 * docker (container) ps -a or docker container ls -a : 모든 도커 컨테이너들의 정보가 나타남
 
