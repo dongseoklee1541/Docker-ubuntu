@@ -186,9 +186,28 @@ service telnet
     log_on_failure += USERID
 }
 
-/etc/init.d/xinetd restart : 코드 삭정후 xinetd 재실행
+/etc/init.d/xinetd restart : 코드 실행시, 텔넷이 켜지면서 재시작됨
 
 
+```
 
+#### Tip Conatiner 실행시 자동으로 Telnet 띄우기
+1. ubt container에서 /bin/<파일 이름> 쉘 스크립트 작성 후 실행권한 주기(chmod +x /bin/<파일 이름>)
+```
+#!/bin/sh
+/etc/init.d/xinetd restart
+
+export LANGUAGE=ko
+LC_ALL=ko_KR.UTF-8 bash  # 한국어 언어 설정
+```
+2. container 밖으로 나와 Image 생성
+```
+docker commit ubt ubx
+```
+3. ubt 이미지를 이용하여 신규 컨테이너 생성 및 구동
+```
+docker run -itd --restart=always --name ubx -p 23:23 ubx /bin/docker_bash
+```
+4. ubx를 실행하여 telnet 접속이 가능한지 확인
 ------
 출처 : 시니어코딩 - 리눅스1~5강
