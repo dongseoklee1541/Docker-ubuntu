@@ -23,7 +23,7 @@ shell 위에서 하는것이다.
 
 * ksh (korn shell)
 
-* zch (Z shell) : shell의 끝판왕, 가장 강력하다
+* zsh (Z shell) : shell의 끝판왕, 가장 강력하다
 
 
 ## Linux File System Directories / Filesystem Hierachy Standard
