@@ -157,6 +157,7 @@ shell 위에서 하는것이다.
  * htop : top보다 이쁘게 보여줌
 * vmstat (n): 메모리와 CPU 등 사용량을 요약해서 한번에 보여줌 , n 을 넣을 경우 n초 단위로 갱신됨
 * ps -ef 
+  * ps aux : 현재 실행중인 프로세스 보이기(작업관리자 같은 역할)
 ----
 * <ps -ef> | grep : grep  은 필터 역할을 한다 .
 * echo **'#!/bin/sh'** > tt.sh 
