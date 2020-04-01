@@ -217,3 +217,8 @@ docker run -itd --restart=always --name ubx -p 23:23 ubx /bin/docker_bash
 4. ubx를 실행하여 telnet 접속이 가능한지 확인
 ------
 출처 : 시니어코딩 - 리눅스1~5강
+
+
+## Windows 에서 linux로 파일 보내기
+
+본래 FTP 프로토콜을 사용해야하나 환경 구성하기 귀찮다면, ssh만 쓰고 싶다면 Putty에서 제공하는 PSCP를 사용하자. CMD에서도 쉽게 가능!
