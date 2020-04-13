@@ -222,3 +222,9 @@ docker run -itd --restart=always --name ubx -p 23:23 ubx /bin/docker_bash
 ## Windows 에서 linux로 파일 보내기
 
 본래 FTP 프로토콜을 사용해야하나 환경 구성하기 귀찮다면, ssh만 쓰고 싶다면 Putty에서 제공하는 PSCP를 사용하자. CMD에서도 쉽게 가능!
+
+
+### Netplan을 사용한 Static IP 설정
+
+https://blog.hkwon.me/ubuntu-18-04-netplan/
+
