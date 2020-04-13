@@ -159,7 +159,7 @@ shell 위에서 하는것이다.
 * ps -ef 
   * ps aux : 현재 실행중인 프로세스 보이기(작업관리자 같은 역할)
 ----
-* <ps -ef> | grep : grep  은 필터 역할을 한다 .
+* <ps -ef> | grep :**grep**은 파일이나 표준입력(stdin)으로 부터 패턴을 찾아주는 역할을 한다. 쉽게 말해 파일의 내용이나 콘솔에 출력물 중에 특정 문자열을 찾는데 사용될 수 있다.
 * echo **'#!/bin/sh'** > tt.sh 
 * chmod <nnn> : 읽기쓰기 권한을 바꾸는 것, 2진수로 이루어져 있으며 나(3bit) 그룹(3bit) 상대(3bit) 로 이루어져있다.
 * chown <username>:<groupname> <filename> : 지정한 유저와 그룹으로 파일의 권한 변경
