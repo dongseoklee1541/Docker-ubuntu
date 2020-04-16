@@ -95,3 +95,8 @@ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root1! --name mysql5 mysql
 
 * -e : 환경변수, os에서 사용하는 변수를 뜻한다.
 * MYSQL_ROOT_PASSWORD : ROOT(최고관리자)의 패스워드
+
+
+------
+
+https://jungwoon.github.io/docker/2019/01/11/Docker-1/
