@@ -145,7 +145,7 @@ shell 위에서 하는것이다.
   * apt-get upgrade <package-name> 
   * ex) apt-get install vim : vim을 설치해라.
   * apt-get remove <package-name> : 패키지를 제거해라.
- 
+  * apt-get purge 패키지이름 : 기존 설치된 패키지를 설정파일을 포함해서 완전히 제거
 ----
 
 * df : 디스크 사용량 확인
@@ -174,6 +174,17 @@ grep 은 정규표현식을 사용한다.
 
 
 ---
+
+#### find
+리눅스에서 특정 파일의 위치를 검색하는 명령어
+* [옵션] : -name , -user(소유자), -newer(전, 후), -perm(허가권), -size(크기)
+* [action] : -print(기본 값), -exec(외부 명령 실행)
+
+* 기본 사용 예
+  * find /etc -name "*.conf" : /etc 디렉터리 하위에 확장명이 .conf인 파일 검색
+  * find /home -user ubuntu : /home 디렉터리 하위에 소유자가 ubuntu인 파일 검색
+  
+  
 #### Telnet Daemon in Ubuntu
 
 ```
