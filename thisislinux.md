@@ -51,7 +51,24 @@
 * 하드디스크 추가 -> 장착한 하드디스크 파티션 할당(*fdisk 하드디스크디렉토리) -> 파티션 장치의 이름을 파일시스템 형식으로 포맷(ext4) -> 파일 시스템을 사용하기 위해 디렉터리에 마운트
 
 ### RAID
-RAID란 여러개의 하드를 하나로 묶어서 사용하는 방식이다. Linear, 0, 5 등 여러가지 방식이 존재한다. RAID는 하드웨어 RAID, 소프트웨어 RAID가 있다. 
+RAID란 여러개의 하드를 하나로 묶어서 사용하는 방식이다. Linear, 0, 5, 6, 1+0 등 여러가지 방식이 존재한다. RAID는 하드웨어 RAID, 소프트웨어 RAID가 있다. 
 
 #### 소프트웨어 RAID
 리눅스에서는 RAID를 만들기 위해선 우선 하드디스크의 파티션을 할당하고, mdadm을 통해서 RAID를 만든다.
+
+* mdadm --create <만들 RAID의 주소> --level=<Linear, 0,1,5,6> --raid-devices=<disk number> <disk address> , .. : RAID 만들기
+   
+* mdadm --detail <RAID의 주소> : RAID 정보
+* mdadm --detail --scan : RAID들의 정보 및 UUID
+
+### LVM(Logical Volume Manager)
+논리 하드디스크 관리자로, RAID와 기본 기능은 비슷해 보이지만, 더 많은 기능이 있다.
+
+> LVM의 주요한 용도는 여러 개의 하드디스크를 합쳐허 한개의 파티션으로 구성한 후에, 다시 필요에 따라서 다시 나눌 수 있다. 또는 한 개의 하드디스크로
+LVM으로 구성하고 다시 파티션을 구분할 수도 있다.
+
+* 물리 볼륨(Physical Volume) : /dev/sda1, /dev/sdb1 등의 파티션을 의미
+* 볼륨 그룹(Volume Group) : 물리 볼륨을 합쳐서 1개의 물리 그룹으로 만든 것
+* 논리 볼륨(Logical Volume) : 볼륨 그룹을 1개 이상으로 나눈 것, 논리적 그룹이라고도 한다.
+
+
