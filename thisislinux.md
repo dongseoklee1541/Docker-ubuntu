@@ -69,6 +69,9 @@ LVM으로 구성하고 다시 파티션을 구분할 수도 있다.
 
 * 물리 볼륨(Physical Volume) : /dev/sda1, /dev/sdb1 등의 파티션을 의미
 * 볼륨 그룹(Volume Group) : 물리 볼륨을 합쳐서 1개의 물리 그룹으로 만든 것
+   * vgcreate <VG 이름> <디스크 주소>
 * 논리 볼륨(Logical Volume) : 볼륨 그룹을 1개 이상으로 나눈 것, 논리적 그룹이라고도 한다.
+   * lvcrate --size <할당용량> --name <이름> <VG 이름>
+   
 
 
