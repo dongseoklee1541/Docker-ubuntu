@@ -97,3 +97,10 @@ LVM으로 구성하고 다시 파티션을 구분할 수도 있다.
 * POP3(Post Office Protocol) : 메일 서버에 도착되어 있는 메일을 클라이언트로 가져올떄 사용
 * IMAP(Internet Mail Access Protocol) : POP3와 용도 동일
 
+
+## CH.11 데이터베이스 서버 구축과 운영
+
+* DBMS(DataBase Management System) : 데이터베이스를 관리하기 위한 소프트웨어
+* RDBMS(Relational DBMS) : 테이블과의 관계성(주키, 외래키 등)을 기반으로 둔 DBMS, 오라클, SQL Server, MariaDB 등이 대부분 관계형DBMS이다.
+
+* ODBC(Open DataBase Connectivity) : Windows의 응용프로램과 MariaDB 서버사이에 통신이 이루어지도록 연결하는 역할
