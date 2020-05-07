@@ -104,3 +104,14 @@ LVM으로 구성하고 다시 파티션을 구분할 수도 있다.
 * RDBMS(Relational DBMS) : 테이블과의 관계성(주키, 외래키 등)을 기반으로 둔 DBMS, 오라클, SQL Server, MariaDB 등이 대부분 관계형DBMS이다.
 
 * ODBC(Open DataBase Connectivity) : Windows의 응용프로램과 MariaDB 서버사이에 통신이 이루어지도록 연결하는 역할
+
+## CH.12 웹 서버 설치와 운영
+
+* LAPM(Linux, Apache, PHP, MySQL) : 우분투 리눅스에서 많이 사용하는 웹 프로그래밍 언어를 약어로 표현
+   * apt-get -y install lamp-server^ : 위에 말한 apache, PHP, mysql-server를 한번에 설치 할 수 있다.
+
+### 웹하드의 설치와 운영
+
+웹하드와 클라우드의 차이는 무엇일까. 웹하드는 따로 서버에 업로드 해야 하지만, 클라우드는 사용자의 로컬의 폴더와 파일을 생성/수정/삭제하면 자동으로
+웹서버에 동기화 되어 동일한 파일로 유지가 된다.
+
