@@ -116,6 +116,10 @@ LVM으로 구성하고 다시 파티션을 구분할 수도 있다.
 웹서버에 동기화 되어 동일한 파일로 유지가 된다.
 
 ## CH.13 FTP 서버 설치와 운영
+**FTP(File Transfer Protocol)** : 인터넷 상에서 파일을 주고 받을 떄 사용하는 전송방식. 파일 전송 전용이다보니 다른 프로토콜(http, scp 등)에 비해
+속도면에서 우위를 가지고 있고, 이어받기 등의 부가 옵션등을 지원한다.
+
+FTP 역시 SSH와 마찬가지로 서버와 클라이언트로 구성되어 있으며, 리눅스에서 사용되는 FTP 서버의 종류로는 vsftpd, proftpd, atftpd, tftpd 등이 있으며, 과거에는 proftpd를 많이 사용했으나, 최근 보안이 강화된 vsftpd(very secure FTP daemon)를 기본으로 사용하는 추세이다.
 
 ### inetd vs standalone
 * inted : 슈퍼 데몬이라도 부르며, 평소에 작동하고 있다가 필요할 때마다 ftp 데몬을 호출하는 방식. 평소에는 ftp 데몬이 작동하지 않기 떄문에 컴퓨터
@@ -123,4 +127,23 @@ LVM으로 구성하고 다시 파티션을 구분할 수도 있다.
 
 * standalone : ftp 데몬이 독립적을 ㅗ작동한느 방식으로, 평소에도 늘 ftp 서비스가 메모리에 상주하고 있다. 자원의 낭비는 있겠지만 ftp 서비스 요청시
 즉각 반응하는 장점이 있다.
+
+## CH.14 NFS 서버 설치와 운영
+파일 서버(File server) : 1대의 컴퓨터에만 저장해놓고 저장한 디렉터리를 공유하는 방식, Client에는 여유 공간이 없고 Server에는 여유 공간이 많이 있는 경우 Client가 Server의 공간을 공유해서 사용하는 방식. 이렇게 **리눅스 컴퓨터끼리** 저장공간을 공유할 수 있도록 하는 서비스가 NFS(Network File System)이다.
+
+> NFS 서버는 리눅스끼리 공유하는것이 원칙이다. Windows도 home 이상의 에디션은 지원한다. 
+
+## CH.15 Samba 서버 설치와 운영
+
+Samba : Windows에서 공유한 폴더와 프린터를 리눅스에서 자유롭게 사용하기 위해 만들어짐. SMB 프로토콜을 사용한다.
+
+> SMB(Server Message Block)또는 CIFS(Common Internet File System) : 네트워크 상 존재하는 노드들 간에 자원을 공유할 수 있도록 설계뙨 프로토콜이다. 주로 네트워크에 연결된 컴퓨터끼리 파일, 프린터, 포트 또는 기타 메시지를 전달하는데 사용된다. SMB는 여러 운영체제(도스, 윈도우, NT, OS/2, 유닉스 등)간 자원 공유를 쉽게 해줄 목적으로 만들어졌다.
+
+> 윈도우 10이상의 버전은 SMB의 버전이 달라서 **protocol negotiation failed: NT_STATUS_CONNECTION_RESET** 이 뜬다. 이때 맨 마지막에 -m SMB2로 명시하고 실행하면 문제없이 연결된다.
+
+* NFS,Samba : NFS는 리눅스(또는 유닉스) 사이에서 저장 공간을 공유하지만, Samba는 리눅스(또는 유닉스)와 Windows 사이에 저장 공간을 공유하는 것이다. 그러므로 리눅스/유닉스/Windows가 혼재한 시스템이라면 NTS, Samba 모두 구축하는것이 좋다.
+
+## CH.16 DHCP 서버 설치와 운영
+
+DHCP(Dynamic Host Configuration Protocol) : 사용하지 않는(비어있는)IP를 요청을 한 컴퓨터에게 자동으로 할당해주는 것
 
