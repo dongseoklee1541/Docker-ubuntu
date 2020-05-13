@@ -195,4 +195,4 @@ PXE(Preboot Execution Environment)로 아직 운영체제가 설치되지 않은
 하지만 PXE방식만으로는 설치시 일일히 설정을 해줘야 하는 단점이 있는데, 이를 극복한 것이 킥스타트다. 일반적으로 킥스타트는 PXE와 함께 구성해 사용한다.
 
 > 사용하는 패키지
-* stsem-config-kickstart
+* system-config-kickstart
