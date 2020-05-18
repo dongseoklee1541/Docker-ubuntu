@@ -18,6 +18,8 @@
 * "c" : Character Device, 마우스 키보드 프린터 등의 입출력 장비
 * "l" : Link, 윈도우의 바로가기 아이콘과 같이 연결되어 있는 파일
 
+> ./test : 현재 디렉터리의 test 파일을 실행, './'의 의미는 현재 디렉터리에 있는 파일을 의미함
+
 #### CD-ROM/USB
 
 > CD/DVD 장치 이름이 /dev/cdrom 으로 사용했는데, /dev/cdrom 과 /dev/sr0은 동일하게 취급된다. (/dev/cdrom은 /dev/sfr0에 링크된 파일이기 때문)
