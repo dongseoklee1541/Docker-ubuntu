@@ -11,13 +11,13 @@ Orchestration : 여러 서버를 관리해주는 것
 
 * `Docker Engine(Docker Daemon, Core)`: 자동차의 엔진과 같이 도커의 전체적인 운영을 담당
 
-* Docker Machine : 컨테이너들, Host OS(보통 wnidows) 위에서 실행되고 있는 리눅스 서버, MY SQL 서버 등,,
+* `Docker Machine` : 컨테이너들, Host OS(보통 wnidows) 위에서 실행되고 있는 리눅스 서버, MY SQL 서버 등,,
 
-* Dokcer Compose : Docker Machine들을 관리해주는 녀석
+* `Dokcer Compose` : Docker Machine들을 관리해주는 녀석
 
-* namespace : dict의 key values 값으로 정의가 되있는 상태,
+* `namespace` : dict의 key values 값으로 정의가 되있는 상태,
 
-* docker NIC(Network Interface Controller) : 별도의 네트워크로 운영(분리됨)
+* `docker NIC(Network Interface Controller)` : 별도의 네트워크로 운영(분리됨)
 
 
 
@@ -25,24 +25,24 @@ Orchestration : 여러 서버를 관리해주는 것
 
 ## Docker command
 
-* docker container run <docker-image-name> <command>
+* `docker container run <docker-image-name> <command>`
   
-* docker system df : 도커의 현재 이미지 개수, 사용량 등의 정보를 보여줌
+* `docker system df` : 도커의 현재 이미지 개수, 사용량 등의 정보를 보여줌
 
-* docker container run -it --name webserver -d -p 80:80 nginx /bin : -it(인풋을 받겠다, 커멘드 가능) 컨테이너의 이름이 webserver , -d 백그라운드로 돌리겠다. -p(포트 번호 나온다) , /bin : 마지막에 들어가는 것은 명령어, 이걸 수행해라
+* `docker container run -it --name webserver -d -p 80:80 nginx /bin` : -it(인풋을 받겠다, 커멘드 가능) 컨테이너의 이름이 webserver , -d 백그라운드로 돌리겠다. -p(포트 번호 나온다) , /bin : 마지막에 들어가는 것은 명령어, 이걸 수행해라
   * i : Interactive 모드로 표준입력과 표준출력을 키보드와 화면을 통해 가능하도록 하는 옵션이다.
   * t:  텍스트 기반의 터미널(TTY)을 애뮬레이션해주는 옵션이다.
   * docker run --restart=always : --restart=always는 컨테이너를 종료하고 나와도 언제든 재실행 시키겠다는 뜻, 꺼지면 안되는 컨테이너에 유용한 옵션 하지만 stop 하면 종료된다. 내가 실수로 종료한것만 꺼지지 않는다. 
 
-* docker (container) ps -a or docker container ls -a : 모든 도커 컨테이너들의 정보가 나타남
+* `docker (container) ps -a` or `docker container ls -a` : 모든 도커 컨테이너들의 정보가 나타남
 
-* docker container rm(prune) webserver : webserver 라는 이름의 컨테이너 모두 삭제 , prune을 쓸경우 정지되어 있는 컨테이너 모두 삭제
+* `docker container rm(prune) webserver` : webserver 라는 이름의 컨테이너 모두 삭제 , prune을 쓸경우 정지되어 있는 컨테이너 모두 삭제
 
-* Ctrl + p , Ctrl + q : 컨테이너를 실행하고, 커멘드 창이 떠있는 상태에서 컨테이너를 종료하지 않고 나올 수 있는 방법(**detach**)
+* `Ctrl + p` , `Ctrl + q` : 컨테이너를 실행하고, 커멘드 창이 떠있는 상태에서 컨테이너를 종료하지 않고 나올 수 있는 방법(**detach**)
 
-* docker attach <container-name> : detach 로 나온 컨테이너에 다시 재진입
+* `docker attach <container-name>` : detach 로 나온 컨테이너에 다시 재진입
 
-* exit(Ctrl + D) : 도커의 컨테이너를 죽이는 것, 종료하면서 나온다
+* `exit(Ctrl + D)` : 도커의 컨테이너를 죽이는 것, 종료하면서 나온다
 
 #### 도커 중지,재실행,명령어
 * docker (container) stop <container-name> : 실행되고 있는 컨테이너를 완전히 죽이는 키워드(**stop**)
