@@ -28,13 +28,13 @@ shell 위에서 하는것이다.
 
 ## Linux File System Directories / Filesystem Hierachy Standard
 
-* **/bin** : 기본 명령어
+* `**/bin**` : 기본 명령어
 
-* /boot : for booting , 부팅을 위한 명령어
+* `/boot` : for booting , 부팅을 위한 명령어
 
-* /dev : device file, cd-rom 디바이스 관련된 명령어
+* `/dev` : device file, cd-rom 디바이스 관련된 명령어
 
-* **/etc** : config, passwrd, rc.d 기타 다양한 것들
+* `**/etc**` : config, passwrd, rc.d 기타 다양한 것들
 
 * /home : user home dir , 실제 유저들이 존재하는 공간 그러나 root라는 superviser 는 /root 를 쓴다.
 
