@@ -8,6 +8,8 @@ Repository : 버전이 저장 되있는 곳 , ex) .git
 
 commit : version
 
+HEAD : 현재 가리키고 있는 버전
+
 # git 명령어
 
 `git init` : Initialize repository
@@ -28,3 +30,6 @@ commit : version
   * `git log -p` : 버전과 버전 사이의 차이점을 비교
 
 `git diff` : Show changes, 마지막 버전과의 차이점을 보여준다
+
+`git checkout 'name'` : HEAD를 'name'의 버전으로 돌린다.
+  * `git checkout master` : HEAD를 최신 버전(master)로 돌린다.
