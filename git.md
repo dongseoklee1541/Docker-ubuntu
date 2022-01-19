@@ -34,6 +34,9 @@ HEAD : 현재 가리키고 있는 버전
 `git checkout 'name'` : HEAD를 'name'의 버전으로 돌린다.
   * `git checkout master` : HEAD를 최신 버전(master)로 돌린다.
 
+`git reset --hard` : 버전 뿐만 아니라 수정하고 있던것도 지운다.
+
+
 `git config` : git의 설정을 바꾼다.
   * `git config --global` : 현재 컴퓨터 전체(--global)의 설정을 바꾼다
    * `git config --global core.editor "nano"` : git의 에디터를 nano로 변경 
