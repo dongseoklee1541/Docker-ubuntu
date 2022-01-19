@@ -21,9 +21,9 @@ HEAD : 현재 가리키고 있는 버전
   *  new file : 처음으로 Staging Area에 올라온 파일
 
 `git add` : add to staging area , 버전으로 만들 파일을 working tree에서 staging Area 로 이동
-
-`git commit` : create version + `-m "Msg"` ( 커밋과 동시에 설명 남기기) , staging Area에서 Repository로 이동
-
+  *  `git add .` : 현재 디렉토리에 있는 모든 파일을 staging area에 올린다.
+`git commit` : create version + `-m "Msg"` ( 커밋과 동시에 CLI에서 설명 남기기) , staging Area에서 Repository로 이동
+  *  `git commit -am "msg"` : add와 commit을 한번에 한다, 다만 Untracked 된 파일은 되지 않는다.
 `git log` : show version
 
   * `git log --stat` : commit된 파일들의 history 를 보여줌
@@ -33,3 +33,7 @@ HEAD : 현재 가리키고 있는 버전
 
 `git checkout 'name'` : HEAD를 'name'의 버전으로 돌린다.
   * `git checkout master` : HEAD를 최신 버전(master)로 돌린다.
+
+`git config` : git의 설정을 바꾼다.
+  * `git config --global` : 현재 컴퓨터 전체(--global)의 설정을 바꾼다
+   * `git config --global core.editor "nano"` : git의 에디터를 nano로 변경 
