@@ -15,9 +15,15 @@ commit : version
 `.git` : git repository
 
 `git status` :  working tree status 
+  *  modified : 기존에 Staging 또는 버전에 저장이 되있는 파일
+  *  new file : 처음으로 Staging Area에 올라온 파일
 
 `git add` : add to staging area , 버전으로 만들 파일을 working tree에서 staging Area 로 이동
 
 `git commit` : create version + `-m "Msg"` ( 커밋과 동시에 설명 남기기) , staging Area에서 Repository로 이동
 
 `git log` : show version
+
+  * `git log --stat` : commit된 파일들의 history 를 보여줌
+
+ 
