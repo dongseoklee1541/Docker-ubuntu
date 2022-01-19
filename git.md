@@ -25,5 +25,6 @@ commit : version
 `git log` : show version
 
   * `git log --stat` : commit된 파일들의 history 를 보여줌
+  * `git log -p` : 버전과 버전 사이의 차이점을 비교
 
- 
+`git diff` : Show changes, 마지막 버전과의 차이점을 보여준다
