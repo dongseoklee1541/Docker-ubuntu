@@ -36,7 +36,7 @@ shell 위에서 하는것이다.
 
 * `**/etc**` : config, passwrd, rc.d 기타 다양한 것들
 
-* /home : user home dir , 실제 유저들이 존재하는 공간 그러나 root라는 superviser 는 /root 를 쓴다.
+* `/home` : user home dir , 실제 유저들이 존재하는 공간 그러나 root라는 superviser 는 /root 를 쓴다.
 
 * **/lib** : shared library , 공유된 라이브러리 설치파일 같은것들
 
