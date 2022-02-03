@@ -56,13 +56,13 @@ Orchestration : 여러 서버를 관리해주는 것
 
 * `docker container port <container-name>` : 컨테이너가 사용하고 있는 포트를 알려줌
   
-* docker container rename <container-name> <바꿀 이름> : 기존 컨테이너의 이름을 바꾸는 명령어
+* `docker container rename <container-name> <바꿀 이름>` : 기존 컨테이너의 이름을 바꾸는 명령어
   
 * docker --link : Docker 컨테이너가 다른 컨테이너에 엑세스 할 수있도록 한다.
 
 #### 모든 도커 컨테이너/이미지 삭제
 
-* docker stop $(docker ps -a -q)
+* `docker stop $(docker ps -a -q)`
 * docker rm $(docker ps -a -q)
 
 * docker rmi $(docker images -q) : 모든 도커 이미지 삭제
