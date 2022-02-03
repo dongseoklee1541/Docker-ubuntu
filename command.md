@@ -54,7 +54,7 @@ Orchestration : 여러 서버를 관리해주는 것
   
 ----
 
-* docker container port <container-name> : 컨테이너가 사용하고 있는 포트를 알려줌
+* `docker container port <container-name>` : 컨테이너가 사용하고 있는 포트를 알려줌
   
 * docker container rename <container-name> <바꿀 이름> : 기존 컨테이너의 이름을 바꾸는 명령어
   
