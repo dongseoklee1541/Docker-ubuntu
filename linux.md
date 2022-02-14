@@ -7,15 +7,14 @@ kernel과 command 을 합쳐놓은것(OS)이다. kernel 은 infra(하드웨어)�
 infra 바로 위에서 관리하며 조종하는 녀석, 펌웨어와 비슷하다.
 
 ### shell
-
-linux kernel 을 shell 이라는 껍질으로 둘러 쌓여있다. 이렇게 shell안에 있는 커널을 조작하고 제어한다. 일반적으로 리눅스 명령어를 사용 할때는
-shell 위에서 하는것이다.
+**사용자가 문자를 입력해 컴퓨터에 명령할 수 있도록 하는 프로그램**
+linux kernel 을 shell 이라는 껍질으로 둘러 쌓여있다. 이렇게 shell안에 있는 커널을 조작하고 제어한다. 일반적으로 리눅스 명령어를 사용 할때는 shell 위에서 하는것이다.
 
 ## Linux Shell Types
 
 * sh(Bourne shell, 최상위 쉘) : By Unix shell, 기능은 적지만 최상이 부모이기 때문에 다른 쉘에서도 모두 사용 가능하다.
 
-* bash (Bourne-agin shell) : Super shell in Linux, 가장 많이 쓴다.
+* bash (Bourne-agin shell) : Super shell in Linux, 리눅스 표준, 가장 많이 쓴다.
 
 * csh (C shell) : C like syntax , C와 비슷하지만 많이는 안쓰임
 
@@ -23,7 +22,7 @@ shell 위에서 하는것이다.
 
 * ksh (korn shell)
 
-* zsh (Z shell) : shell의 끝판왕, 가장 강력하다
+* zsh (Z shell) : Mac 카탈리나 OS 기본 쉘 ,shell의 끝판왕, 가장 강력하다
 
 
 ## Linux File System Directories / Filesystem Hierachy Standard
