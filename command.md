@@ -37,7 +37,8 @@ Orchestration : 여러 서버를 관리해주는 것
 * `docker (container) ps -a` or `docker container ls -a` : 모든 도커 컨테이너들의 정보가 나타남
 
 * `docker container rm(prune) webserver` : webserver 라는 이름의 컨테이너 모두 삭제 , prune을 쓸경우 정지되어 있는 컨테이너 모두 삭제
-
+  * `docker rm <contaitner-name> -f` : -f 옵션으로 실행중인 컨테이너도 삭제 가능
+  * 
 * `Ctrl + p` , `Ctrl + q` : 컨테이너를 실행하고, 커멘드 창이 떠있는 상태에서 컨테이너를 종료하지 않고 나올 수 있는 방법(**detach**)
 
 * `docker attach <container-name>` : detach 로 나온 컨테이너에 다시 재진입
@@ -51,6 +52,7 @@ Orchestration : 여러 서버를 관리해주는 것
   
 * `docker container exec -it <container-name> cat /etc/hosts` : 실행되어 있는 컨테이너에게 명령을 주는 커맨드 **exec**
   * `docker exec -it ubv bash` : "ubuntu의 bash쉘을 실행해라", 나갈때 그냥 exit해도 컨테이너가 종료되지 않는다.
+  * `docker exec -it <container-name> /bin/bash` : 컨테이너 진입, SSH 접속과 유사
   
 ----
 
