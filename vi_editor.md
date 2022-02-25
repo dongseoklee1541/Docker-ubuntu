@@ -20,7 +20,7 @@ h,j,k,l 로 방향을 이동할 수 있다. h는 좌 l은 우 j는 아래 마지
 * ctrl + f or u or b : f는 페이지 다운, u 또는 b는 페이지 업이다.
 
 ### 수정
-* x : 한칸 지우기
+* `x` : 한칸 지우기
 * X(shift + x) : backspace 앞의 한칸 지우기
 * u : Undo(Ctrl+z)
 * r : 그자리의 한글자만 바꾸기
