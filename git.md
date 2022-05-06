@@ -71,9 +71,34 @@ commit id | 기타 여러 행위들
 
 branch는 계속 움직이지만, tag는 정적으로 고정시켜놓을 수있다.
 
+* `git tag <name>` : name 으로 HEAD가 가리키는 위치에서 tag가 생성
+ * `git tag -d <name>` : -d 옵션으로 tag 삭제
+
 ---
 # 지역저장소를 원격저장소에 연결하기
 
 * git remote add origin(원격 저장소의 별명, 꼭 origin이 아니여도 됨) https~(원격 저장소의 주소) : 지역저장소에게 원격저장소를 알려줌
 * git push --set-upstream origin master : 원격저장소(origin)의 브랜치(master)와 내 저장소의 브랜치를 같은 이름으로 하고, push 한다.
  * -upstream : 
+
+---
+# git fetch vs pull
+* `git pull` : git fetch + merge
+* `git fetch` : 원격 저장소에서 파일을 다운로드만 해온다
+
+---
+# git merge vs rebase
+
+rebase는 parent commit을 바꾼다. 
+
+merge 와 rebase 모두 병합한 결과는 같아야 한다.
+
+* Fast-forawrd : rebase시에 발생
+* git rebase --continue : rebase 상황에서 conflict이 발생했을때 이를 해결 한 후 이어나가게 한다.
+
+# git revert vs reset
+
+reset과 revert는 전혀 비슷한 기능이 아니다.
+* revert는 기존에 실행한 commit 을 지금 상황에서 취소한 상태로 만든다.
+ * revert conflict는 기존 commit과 다르게 역방향으로 충돌이 벌어지는 경우가 발생한다.
+* reset은 위에 작성한 것과 같이 HEAD와 HEAD-branch를 옮긴다.
