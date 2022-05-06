@@ -23,7 +23,8 @@ HEAD : 현재 가리키고 있는 버전
 `git add` : add to staging area , 버전으로 만들 파일을 working tree에서 staging Area 로 이동
   *  `git add .` : 현재 디렉토리에 있는 모든 파일을 staging area에 올린다.
 `git commit` : create version + `-m "Msg"` ( 커밋과 동시에 CLI에서 설명 남기기) , staging Area에서 Repository로 이동
-  *  `git commit -am "msg"` : add와 commit을 한번에 한다, 다만 Untracked 된 파일은 되지 않는다.
+  *  `git commit -am "msg"` : add와 commit을 한번에 한다, **다만 Untracked 된 파일은 되지 않는다.** 왜냐? 함부로 commit하면 안되는 파일들이 존재하기 때문이다.
+ 
 `git log` : show version
 
   * `git log --stat` : commit된 파일들의 history 를 보여줌
