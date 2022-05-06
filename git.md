@@ -10,6 +10,8 @@ commit : version
 
 HEAD : 현재 가리키고 있는 버전
 
+master : 해당 브랜치에서 가장 마지막에 작업한 것
+
 # git 명령어
 
 `git init` : Initialize repository
@@ -25,14 +27,14 @@ HEAD : 현재 가리키고 있는 버전
 
 
 `git commit` : create version + `-m "Msg"` ( 커밋과 동시에 CLI에서 설명 남기기) , staging Area에서 Repository로 이동
-
-
   *  `git commit -am "msg"` : add와 commit을 한번에 한다, **다만 Untracked 된 파일은 되지 않는다.** 왜냐? 함부로 commit하면 안되는 파일들이 존재하기 때문이다.
+  *  `git commit --amend ~~` : --amend를 사용하면 바로 직전에 commit message를 수정할 수 있다.
  
 `git log` : show version
 
   * `git log --stat` : commit된 파일들의 history 를 보여줌
   * `git log -p` : 버전과 버전 사이의 차이점을 비교
+  * `git log --oneline` : 너무 장황한 로그를 간단하게 보여줌
 
 `git diff` : Show changes, 마지막 버전과의 차이점을 보여준다
 
@@ -45,3 +47,19 @@ HEAD : 현재 가리키고 있는 버전
 `git config` : git의 설정을 바꾼다.
   * `git config --global` : 현재 컴퓨터 전체(--global)의 설정을 바꾼다
    * `git config --global core.editor "nano"` : git의 에디터를 nano로 변경 
+
+---
+
+# git reset vs revert vs checkout
+
+reset : HEAD가 가리키는 브랜치를 움직인다
+* reset인 이유? 삭제와 복원을 하는 명령어이기 때문이다.
+* HEAD attached : 브랜치가 움직인다
+* HEAD dettached : checkout과 동일, HEAD가 가리키는 브랜치가 없기때문!
+
+checkout : HEAD를 움직인다
+
+### git reflog
+commit id | 기타 여러 행위들
+* reflog 는 지금까지 해온 흔적들을 저장해 놓은 로그이다.
+* reset 이나 checkout으로 
