@@ -35,6 +35,7 @@ master : 해당 브랜치에서 가장 마지막에 작업한 것
   * `git log --stat` : commit된 파일들의 history 를 보여줌
   * `git log -p` : 버전과 버전 사이의 차이점을 비교
   * `git log --oneline` : 너무 장황한 로그를 간단하게 보여줌
+   * `git log --oneline --all` : HEAD가리키는 브랜치 외의(모든 레퍼런스를) 보여준다
 
 `git diff` : Show changes, 마지막 버전과의 차이점을 보여준다
 
@@ -55,6 +56,7 @@ master : 해당 브랜치에서 가장 마지막에 작업한 것
 reset : HEAD가 가리키는 브랜치를 움직인다
 * reset인 이유? 삭제와 복원을 하는 명령어이기 때문이다.
 * HEAD attached : 브랜치가 움직인다
+ * 이러한 이유로, master branch는 이전의 commit 버전으로도 왔다갔다 할 수 있다.
 * HEAD dettached : checkout과 동일, HEAD가 가리키는 브랜치가 없기때문!
 
 checkout : HEAD를 움직인다
@@ -63,3 +65,15 @@ checkout : HEAD를 움직인다
 commit id | 기타 여러 행위들
 * reflog 는 지금까지 해온 흔적들을 저장해 놓은 로그이다.
 * reset 이나 checkout으로 
+
+---
+# git branch vs tag
+
+branch는 계속 움직이지만, tag는 정적으로 고정시켜놓을 수있다.
+
+---
+# 지역저장소를 원격저장소에 연결하기
+
+* git remote add origin(원격 저장소의 별명, 꼭 origin이 아니여도 됨) https~(원격 저장소의 주소) : 지역저장소에게 원격저장소를 알려줌
+* git push --set-upstream origin master : 원격저장소(origin)의 브랜치(master)와 내 저장소의 브랜치를 같은 이름으로 하고, push 한다.
+ * -upstream : 
